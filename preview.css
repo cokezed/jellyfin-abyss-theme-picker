@@ -264,8 +264,15 @@ body {
 }
 
 .star-line {
-  color: rgba(var(--abyss-accent), 0.95);
   margin: 0.5rem 0;
+}
+
+.star-line .rating-star {
+  color: rgb(255, 193, 7);
+}
+
+.star-line .rating-value {
+  color: rgba(var(--abyss-accent), 0.95);
 }
 
 .detail-play {
