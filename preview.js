@@ -90,7 +90,17 @@
     );
   }
 
+  let lastGroup = "";
   catalog.themes.forEach(function (theme) {
+    const group = theme.group || "";
+    if (group && group !== lastGroup) {
+      lastGroup = group;
+      const heading = document.createElement("li");
+      heading.className = "theme-group";
+      heading.textContent = group;
+      listEl.appendChild(heading);
+    }
+
     const li = document.createElement("li");
     const btn = document.createElement("button");
     btn.type = "button";

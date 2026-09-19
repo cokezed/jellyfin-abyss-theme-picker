@@ -71,6 +71,20 @@ body {
   margin-bottom: 0.35rem;
 }
 
+#theme-list li.theme-group {
+  margin: 0.85rem 0 0.25rem;
+  padding: 0 0.15rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+#theme-list li.theme-group:first-child {
+  margin-top: 0;
+}
+
 #theme-list button {
   width: 100%;
   text-align: left;

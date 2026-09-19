@@ -5,6 +5,7 @@ window.ABYSS_THEME_CATALOG = {
     {
       "id": "stock",
       "label": "Abyss stock",
+      "group": "Reference",
       "aliases": [
         "stock",
         "abyss-stock",
@@ -31,6 +32,7 @@ window.ABYSS_THEME_CATALOG = {
     {
       "id": "rose",
       "label": "Rose orchid",
+      "group": "Pink & purple",
       "aliases": [
         "rose",
         "orchid",
@@ -54,55 +56,34 @@ window.ABYSS_THEME_CATALOG = {
       ]
     },
     {
-      "id": "sage",
-      "label": "Sage green",
+      "id": "lavender",
+      "label": "Lilac",
+      "group": "Pink & purple",
       "aliases": [
-        "sage",
-        "green"
+        "lavender",
+        "lilac",
+        "wisteria"
       ],
       "accent": [
-        130,
-        195,
-        150
-      ],
-      "glassTint": [
-        36,
-        48,
-        42
-      ],
-      "secondary": [
-        100,
-        180,
-        140
-      ]
-    },
-    {
-      "id": "ocean",
-      "label": "Ocean blue",
-      "aliases": [
-        "ocean",
-        "blue",
-        "sky"
-      ],
-      "accent": [
-        100,
-        165,
-        210
-      ],
-      "glassTint": [
-        32,
-        42,
-        55
-      ],
-      "secondary": [
-        130,
         200,
-        255
+        170,
+        225
+      ],
+      "glassTint": [
+        48,
+        42,
+        52
+      ],
+      "secondary": [
+        220,
+        195,
+        240
       ]
     },
     {
       "id": "midnight",
       "label": "Royal purple",
+      "group": "Pink & purple",
       "aliases": [
         "midnight",
         "dark-purple",
@@ -128,47 +109,75 @@ window.ABYSS_THEME_CATALOG = {
       ]
     },
     {
-      "id": "gold",
-      "label": "Soft gold",
+      "id": "ocean",
+      "label": "Ocean blue",
+      "group": "Blue & ice",
       "aliases": [
-        "gold",
-        "champagne"
+        "ocean",
+        "blue",
+        "sky"
       ],
       "accent": [
-        220,
-        190,
-        130
+        100,
+        165,
+        210
       ],
       "glassTint": [
-        52,
-        46,
-        38
+        32,
+        42,
+        55
       ],
       "secondary": [
-        255,
-        220,
-        160
+        130,
+        200,
+        255
       ]
     },
     {
-      "id": "copper",
-      "label": "Copper",
+      "id": "frost",
+      "label": "Frost",
+      "group": "Blue & ice",
       "aliases": [
-        "copper",
-        "bronze"
+        "frost",
+        "slate",
+        "steel"
       ],
       "accent": [
-        210,
-        150,
-        110
+        165,
+        195,
+        220
       ],
       "glassTint": [
-        50,
         40,
-        36
+        44,
+        52
       ],
       "secondary": [
-        230,
+        190,
+        210,
+        235
+      ]
+    },
+    {
+      "id": "sage",
+      "label": "Sage green",
+      "group": "Green",
+      "aliases": [
+        "sage",
+        "green"
+      ],
+      "accent": [
+        130,
+        195,
+        150
+      ],
+      "glassTint": [
+        36,
+        48,
+        42
+      ],
+      "secondary": [
+        100,
         180,
         140
       ]
@@ -176,6 +185,7 @@ window.ABYSS_THEME_CATALOG = {
     {
       "id": "jade",
       "label": "Jade",
+      "group": "Green",
       "aliases": [
         "jade",
         "sea-glass",
@@ -199,56 +209,9 @@ window.ABYSS_THEME_CATALOG = {
       ]
     },
     {
-      "id": "lavender",
-      "label": "Lilac",
-      "aliases": [
-        "lavender",
-        "lilac",
-        "wisteria"
-      ],
-      "accent": [
-        200,
-        170,
-        225
-      ],
-      "glassTint": [
-        48,
-        42,
-        52
-      ],
-      "secondary": [
-        220,
-        195,
-        240
-      ]
-    },
-    {
-      "id": "frost",
-      "label": "Frost",
-      "aliases": [
-        "frost",
-        "slate",
-        "steel"
-      ],
-      "accent": [
-        165,
-        195,
-        220
-      ],
-      "glassTint": [
-        40,
-        44,
-        52
-      ],
-      "secondary": [
-        190,
-        210,
-        235
-      ]
-    },
-    {
       "id": "moss",
       "label": "Moss",
+      "group": "Green",
       "aliases": [
         "moss",
         "forest",
@@ -271,8 +234,33 @@ window.ABYSS_THEME_CATALOG = {
       ]
     },
     {
+      "id": "gold",
+      "label": "Soft gold",
+      "group": "Gold & warm",
+      "aliases": [
+        "gold",
+        "champagne"
+      ],
+      "accent": [
+        220,
+        190,
+        130
+      ],
+      "glassTint": [
+        52,
+        46,
+        38
+      ],
+      "secondary": [
+        255,
+        220,
+        160
+      ]
+    },
+    {
       "id": "honey",
       "label": "Honey",
+      "group": "Gold & warm",
       "aliases": [
         "honey",
         "amber",
@@ -291,6 +279,30 @@ window.ABYSS_THEME_CATALOG = {
       "secondary": [
         240,
         200,
+        140
+      ]
+    },
+    {
+      "id": "copper",
+      "label": "Copper",
+      "group": "Gold & warm",
+      "aliases": [
+        "copper",
+        "bronze"
+      ],
+      "accent": [
+        210,
+        150,
+        110
+      ],
+      "glassTint": [
+        50,
+        40,
+        36
+      ],
+      "secondary": [
+        230,
+        180,
         140
       ]
     }
