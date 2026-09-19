@@ -1,3 +1,4 @@
+import crypto from "crypto";
 import fs from "fs";
 
 const catalog = JSON.parse(fs.readFileSync("themes.json", "utf8"));
@@ -13,4 +14,27 @@ const js =
   ";\n";
 
 fs.writeFileSync("themes-data.js", js);
-console.log(`Wrote themes-data.js (${payload.themes.length} themes)`);
+
+const stamp = crypto
+  .createHash("sha256")
+  .update(fs.readFileSync("themes.json"))
+  .digest("hex")
+  .slice(0, 8);
+
+const indexPath = "index.html";
+let index = fs.readFileSync(indexPath, "utf8");
+index = index.replace(
+  /(href="preview\.css)(?:\?v=[^"]*)?(")/,
+  `$1?v=${stamp}$2`
+);
+index = index.replace(
+  /(src="themes-data\.js)(?:\?v=[^"]*)?(")/,
+  `$1?v=${stamp}$2`
+);
+index = index.replace(
+  /(src="preview\.js)(?:\?v=[^"]*)?(")/,
+  `$1?v=${stamp}$2`
+);
+fs.writeFileSync(indexPath, index);
+
+console.log(`Wrote themes-data.js (${payload.themes.length} themes), asset ?v=${stamp}`);
