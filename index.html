@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Preview Abyss-style accent palettes for Jellyfin (static mock UI)." />
+  <title>Abyss Jellyfin theme picker</title>
+  <link rel="stylesheet" href="preview.css" />
+  <script src="themes-data.js"></script>
+</head>
+<body>
+  <aside class="theme-nav" aria-label="Themes">
+    <h1>Abyss themes</h1>
+    <p class="hint">Pick a color family. Mock UI only — pair with Abyss CSS on your server.</p>
+    <ul id="theme-list"></ul>
+    <p class="hint">CSS variables for Jellyfin <code>branding.xml</code>:</p>
+    <pre class="css-snippet" id="css-snippet"></pre>
+  </aside>
+
+  <main class="mock-app">
+    <header class="mock-header">
+      <span class="mock-logo">Jellyfin</span>
+      <nav class="mock-header-nav">Home · Movies · TV</nav>
+    </header>
+
+    <section class="mock-mbe">
+      <div class="mock-mbe-backdrop"></div>
+      <div class="mock-mbe-content">
+        <h2 class="mock-mbe-title">Sample Feature Title</h2>
+        <div class="mock-pills">
+          <span class="pill">1 / 5</span>
+          <span class="pill">PG-13</span>
+          <span class="pill">2h 14m</span>
+          <span class="pill">2024</span>
+        </div>
+        <p class="mock-genre">Drama · Sci‑Fi</p>
+        <button type="button" class="btn-play">▶ Play</button>
+      </div>
+    </section>
+
+    <section class="mock-home-row">
+      <div class="section-header-pill">
+        <span class="chev">›</span>
+        <h3 class="section-title">Continue Watching</h3>
+      </div>
+      <div class="poster-row">
+        <div class="poster"></div>
+        <div class="poster"></div>
+        <div class="poster"></div>
+        <div class="poster"></div>
+      </div>
+    </section>
+
+    <section class="mock-detail">
+      <h3 class="detail-label">Detail page snippet</h3>
+      <p class="parent-link">Sample Series · Season 1</p>
+      <p class="star-line">★ 8.5 / 10</p>
+      <button type="button" class="btn-play detail-play">▶ Play</button>
+      <a href="#" class="text-link" onclick="return false">Action</a> ·
+      <a href="#" class="text-link" onclick="return false">Drama</a>
+      <div class="progress-wrap">
+        <div class="progress-bar"><div class="progress-fill"></div></div>
+      </div>
+    </section>
+
+    <section class="swatch-panel">
+      <h3 class="detail-label">Variables</h3>
+      <div class="swatch-grid" id="swatch-grid"></div>
+    </section>
+  </main>
+
+  <script src="preview.js"></script>
+</body>
+</html>

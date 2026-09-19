@@ -1,0 +1,324 @@
+:root {
+  --abyss-accent: 215, 100, 190;
+  --abyss-accent-channel: 215 100 190;
+  --abyss-glass-tint: 50, 36, 58;
+  --abyss-secondary: 190, 120, 255;
+  --abyss-radius: 12px;
+  --page-bg: #0c0c0e;
+  --text: rgba(255, 255, 255, 0.92);
+  --text-muted: rgba(255, 255, 255, 0.55);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--page-bg);
+  color: var(--text);
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+
+.theme-nav {
+  padding: 1.25rem 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.35);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.theme-nav h1 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin: 0 0 1rem;
+}
+
+.hint code {
+  font-size: 0.7rem;
+}
+
+.css-snippet {
+  font-size: 0.65rem;
+  line-height: 1.35;
+  padding: 0.65rem;
+  margin: 0 0 1rem;
+  border-radius: var(--abyss-radius);
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(var(--abyss-accent), 0.2);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+#theme-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#theme-list li {
+  margin-bottom: 0.35rem;
+}
+
+#theme-list button {
+  width: 100%;
+  text-align: left;
+  padding: 0.45rem 0.6rem;
+  border-radius: var(--abyss-radius);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#theme-list button:hover {
+  background: rgba(var(--abyss-accent), 0.12);
+}
+
+#theme-list button.active {
+  background: rgba(var(--abyss-accent), 0.18);
+  border-color: rgba(var(--abyss-accent), 0.35);
+  color: rgb(var(--abyss-accent));
+}
+
+.swatch-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.mock-app {
+  padding: 0 1.5rem 2rem;
+  max-width: 960px;
+}
+
+.mock-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  margin: 0 -1.5rem 1.25rem;
+  background: rgba(var(--abyss-glass-tint), 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(var(--abyss-accent), 0.15);
+}
+
+.mock-logo {
+  font-weight: 600;
+  color: rgb(var(--abyss-accent));
+}
+
+.mock-header-nav {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.mock-mbe {
+  position: relative;
+  border-radius: var(--abyss-radius);
+  overflow: hidden;
+  min-height: 200px;
+  margin-bottom: 1.75rem;
+}
+
+.mock-mbe-backdrop {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(var(--abyss-glass-tint), 0.95) 0%, rgba(0, 0, 0, 0.4) 55%),
+    linear-gradient(135deg, #1a1a22, #0a0a10);
+}
+
+.mock-mbe-content {
+  position: relative;
+  padding: 1.5rem 1.25rem;
+  max-width: 420px;
+}
+
+.mock-mbe-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+}
+
+.mock-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.pill {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 8px;
+  background: rgba(var(--abyss-glass-tint), 0.82);
+  border: 1px solid rgba(var(--abyss-accent), 0.35);
+  color: rgba(var(--abyss-accent), 0.95);
+}
+
+.mock-genre {
+  margin: 0 0 1rem;
+  color: rgba(var(--abyss-accent), 0.75);
+  font-size: 0.95rem;
+}
+
+.btn-play {
+  background: rgb(var(--abyss-accent));
+  color: #121212;
+  border: 1px solid rgba(var(--abyss-accent), 0.45);
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--abyss-radius);
+  cursor: default;
+  font-size: 0.95rem;
+}
+
+.mock-home-row {
+  margin-bottom: 1.75rem;
+}
+
+.section-header-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.65rem 0.35rem 0.35rem;
+  margin-bottom: 0.75rem;
+  border-radius: var(--abyss-radius);
+  background: rgba(var(--abyss-accent), 0.1);
+  border: 1px solid rgba(var(--abyss-accent), 0.22);
+}
+
+.section-header-pill .chev {
+  color: rgba(var(--abyss-accent), 0.9);
+}
+
+.section-title {
+  margin: 0;
+  font-size: 1.05rem;
+  color: rgb(var(--abyss-accent));
+}
+
+.poster-row {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.poster {
+  width: 100px;
+  aspect-ratio: 2/3;
+  border-radius: var(--abyss-radius);
+  background: linear-gradient(145deg, rgba(var(--abyss-accent), 0.25), rgba(var(--abyss-glass-tint), 0.8));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mock-detail {
+  padding: 1rem 1.1rem;
+  border-radius: var(--abyss-radius);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 1.5rem;
+}
+
+.detail-label {
+  margin: 0 0 0.65rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.parent-link,
+.text-link {
+  color: rgba(var(--abyss-accent), 0.9);
+}
+
+.star-line {
+  color: rgba(var(--abyss-accent), 0.95);
+  margin: 0.5rem 0;
+}
+
+.detail-play {
+  margin: 0.65rem 0;
+}
+
+.progress-wrap {
+  margin-top: 1rem;
+  max-width: 280px;
+}
+
+.progress-bar {
+  height: 7px;
+  border-radius: var(--abyss-radius);
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 62%;
+  height: 100%;
+  background: rgba(var(--abyss-accent), 0.95);
+  border-radius: var(--abyss-radius);
+}
+
+.swatch-panel {
+  margin-bottom: 2rem;
+}
+
+.swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.65rem;
+}
+
+.swatch-card {
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--abyss-radius);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.8rem;
+  font-family: ui-monospace, monospace;
+}
+
+.swatch-card strong {
+  display: block;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  margin-bottom: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.color-bar {
+  height: 28px;
+  border-radius: 6px;
+  margin-bottom: 0.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 720px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-nav {
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
