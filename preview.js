@@ -20,7 +20,14 @@
     const g = theme.glassTint.join(", ");
     const s = theme.secondary.join(", ");
     const sch = theme.secondary.join(" ");
+    const label = theme.label;
+    const id = theme.id;
     return (
+      "/* Abyss palette - " +
+      label +
+      " (theme: " +
+      id +
+      ") */\n" +
       ":root {\n" +
       "  --abyss-accent: " +
       a +
@@ -33,12 +40,16 @@
       ";\n" +
       "}\n" +
       'html[data-theme="dark"] {\n' +
+      "  --jf-palette-primary-main: rgb(var(--abyss-accent));\n" +
+      "  --jf-palette-primary-mainChannel: var(--abyss-accent-channel);\n" +
       "  --jf-palette-secondary-main: rgb(" +
       s +
       ");\n" +
       "  --jf-palette-secondary-mainChannel: " +
       sch +
       ";\n" +
+      "  --jf-palette-AppBar-defaultBg: rgba(var(--abyss-glass-tint), 0.92);\n" +
+      "  --jf-palette-AppBar-transparentBg: rgba(var(--abyss-glass-tint), 0.72);\n" +
       "}"
     );
   }

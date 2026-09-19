@@ -3,6 +3,32 @@ window.ABYSS_THEME_CATALOG = {
   "defaultTheme": "rose",
   "themes": [
     {
+      "id": "stock",
+      "label": "Abyss stock",
+      "aliases": [
+        "stock",
+        "abyss-stock",
+        "near-white",
+        "upstream",
+        "original"
+      ],
+      "accent": [
+        245,
+        245,
+        247
+      ],
+      "glassTint": [
+        42,
+        42,
+        42
+      ],
+      "secondary": [
+        245,
+        245,
+        247
+      ]
+    },
+    {
       "id": "rose",
       "label": "Rose orchid",
       "aliases": [

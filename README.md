@@ -2,9 +2,8 @@
 
 Static preview for **Abyss-style accent palettes** (home row, media bar, detail page mock). No server, no Jellyfin install — color theming only.
 
-**Live site (after you publish):**  
-`https://YOUR_GITHUB_USER.github.io/jellyfin-abyss-theme-picker/`  
-Deep links: `#rose`, `#ocean`, `#midnight`, etc.
+**Live site:** https://cokezed.github.io/jellyfin-abyss-theme-picker/  
+Deep links: `#stock` (upstream near-white), `#rose`, `#ocean`, `#midnight`, etc.
 
 ## Local
 
@@ -28,8 +27,8 @@ git remote add origin https://github.com/YOUR_USER/jellyfin-abyss-theme-picker.g
 git push -u origin main
 ```
 
-3. On GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-4. After the **Deploy GitHub Pages** workflow finishes, open the URL above.
+3. **Required before deploy works:** **Settings → Pages → Build and deployment → Source: GitHub Actions** (not “Deploy from a branch”). If you skip this, `deploy-pages` fails with **404 / Failed to create deployment**.
+4. **Actions → Deploy GitHub Pages → Re-run all jobs** (or push again). When green, open the live URL above.
 
 ## Using colors on Jellyfin
 
